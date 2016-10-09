@@ -1,10 +1,25 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Tripin</title>
-	</head>
+<head>
+	<link rel="stylesheet" href="./third_party/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./third_party/leaflet/leaflet.css">
+	<link rel="stylesheet" href="./static/css/tripin.css">
 
-	<body>
-		<h1>Welcome to Tripin.</h1>
-		<p>This is the homepage of Tripin.</p>
-	</body>
+	<title>Tripin</title>
+</head>
+
+<body>
+	<h1>Welcome to Tripin.</h1>
+	<p>This is the homepage of Tripin.</p>
+
+	<div id="map_view">
+	</div>
+
+	<!-- dependencies -->
+	<script src="./third_party/jquery/jquery-3.1.1.min.js"></script>
+	<script src="./third_party/leaflet/leaflet.js"></script>
+
+	<script src="./static/js/map_presenter.js"></script>
+
+</body>
 </html>
