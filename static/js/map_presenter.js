@@ -1,6 +1,7 @@
 var mapViewDOM = $("#map_view");
 
 var map;
+var geojson
 
 var initializeMap = function() {
 	if (map != undefined) {
@@ -9,7 +10,7 @@ var initializeMap = function() {
     map = L.map(mapViewDOM[0]);
     var initLat = 37.403122;
     var initLng = -121.969930;
-    var initZoomLevel = 11;
+    var initZoomLevel = 2;
     map.setView([initLat, initLng], initZoomLevel);
 
 	var mapBoxUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
@@ -24,7 +25,43 @@ var initializeMap = function() {
 	    id: 'mapbox.satellite',
 	    accessToken: mapBoxLightToken
 	}).addTo(map);
+	geojson = L.geoJson(countriesData, {
+	    onEachFeature: onEachFeature
+	}).addTo(map);
     return map;
 }
+
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+}
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+}
+
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
+}
+
+
 
 map = initializeMap();
