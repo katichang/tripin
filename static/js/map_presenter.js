@@ -7,9 +7,15 @@ var initializeMap = function() {
 	if (map != undefined) {
 		map.remove();
 	}
-    map = L.map(mapViewDOM[0]);
-    var initLat = 37.403122;
-    var initLng = -121.969930;
+    worldBounds = new L.LatLngBounds(new L.LatLng(-90, -180), new L.LatLng(90, 180));
+    map = L.map(mapViewDOM[0], {
+        maxBounds: worldBounds,
+        maxBoundsViscosity: 1.0,
+        worldCopyJump: true
+    });
+
+    var initLat = 25.0;
+    var initLng = 0.0;
     var initZoomLevel = 2;
     map.setView([initLat, initLng], initZoomLevel);
 
