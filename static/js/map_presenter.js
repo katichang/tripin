@@ -1,7 +1,8 @@
 var mapViewDOM = $("#map_view");
 
 var map;
-var geojson
+var geojson;
+var selectedCountries = new Set();
 
 var initializeMap = function() {
 	if (map != undefined) {
@@ -39,6 +40,10 @@ var initializeMap = function() {
 
 function highlightFeature(e) {
     var layer = e.target;
+    var country = layer.feature.properties.name;
+    if (selectedCountries.has(country)) {
+        return;
+    }
 
     layer.setStyle({
         weight: 5,
@@ -53,18 +58,48 @@ function highlightFeature(e) {
 }
 
 function resetHighlight(e) {
-    geojson.resetStyle(e.target);
+    var layer = e.target;
+    var country = layer.feature.properties.name;
+    if (selectedCountries.has(country)) {
+        return;
+    }
+    geojson.resetStyle(layer);
 }
 
 function zoomToFeature(e) {
     map.fitBounds(e.target.getBounds());
 }
 
+function selectFeature(e) {
+    var layer = e.target;
+    var country = layer.feature.properties.name;
+    if (selectedCountries.has(country)) {
+        selectedCountries.delete(country);
+        unColorSelectedFeature(layer);
+    } else {
+        selectedCountries.add(country);
+        colorSelectedFeature(layer);
+    }
+}
+
+function colorSelectedFeature(layer) {
+    layer.setStyle({
+        weight: 5,
+        color: ' #00ff00',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+}
+
+function unColorSelectedFeature(layer) {
+    geojson.resetStyle(layer);
+}
+
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
-        click: zoomToFeature
+        click: selectFeature
     });
 }
 
