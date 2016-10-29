@@ -4,23 +4,51 @@
 	<link rel="stylesheet" href="./third_party/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./third_party/leaflet/leaflet.css">
 	<link rel="stylesheet" href="./static/css/tripin.css">
-
-	<title>Tripin</title>
+	<link rel="icon" type="image/png" href="./assets/browser_tab_img.png">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Open+Sans|Roboto" rel="stylesheet">
+	<title>Trip Pin</title>
 </head>
 
 <body>
-	<h1>Welcome to Tripin.</h1>
+	<div id="container">
+		<div id="logo">
+			<h1><img src="./assets/logo.png" alt="Trip Pin logo" width="22px" height="40px"> Trip Pin</h1>
+		</div>
+
+		<div id="menu">
+			<p class="menu"><a href="">About Us</a></p>
+			<p class="menu"><a href="">Gallery</a></p>
+			<p class="menu"><a href="">Contact Us</a></p>
+		</div>
+
+		<div id="homepage">
+			<p class="homepage title">Welcome to <span class="inlineTitle"> Trip Pin</span></p>
+			<p class="homepage intro">
+				Make voyages. Attemp them.
+				<br> And record them here at <span class="inlineTitle"> Trip Pin</span>. There is nothing else.
+			</p>
+			<p class="homepage startPin">
+				<span onclick="">start my pin</span>
+			</p>
+
+		</div>
+		<div id="mapView"></div>
+		<div id="logView"></div>
+
+	</div>
+
+<!-- 	<h1>Welcome to Trip Pin.</h1>
 	<p>This is the homepage of Tripin.</p>
 
 	<div id="map_view">
-	</div>
+	</div> -->
 
 	<!-- dependencies -->
-	<script src="./third_party/jquery/jquery-3.1.1.min.js"></script>
+<!-- 	<script src="./third_party/jquery/jquery-3.1.1.min.js"></script>
 	<script src="./third_party/leaflet/leaflet.js"></script>
 
 	<script src="./static/js/countries.js"></script>
-	<script src="./static/js/map_presenter.js"></script>
+	<script src="./static/js/map_presenter.js"></script> -->
 
 </body>
 </html>

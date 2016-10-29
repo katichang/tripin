@@ -1,4 +1,138 @@
+html,body{
+    overflow:hidden;
+}
+
+h1 {
+	font-family:'Alegreya SC', serif;
+	font-size: 2em;
+	font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#container {
+	left: 0px;
+	top: 0px;
+	height: 100vh;
+	width: 100%;
+	border: 1px solid red;
+	/*background-color: rgba(174,159,141, 0.6);*/
+	background-image: url("../../assets/sampleImg1.jpg");
+	background-size: 100% 100%;
+}
+
+.inlineTitle{
+	font-family:'Alegreya SC', serif;
+	color: rgba(178,44,65,1);
+}
+
+#mapView{
+	position: fixed;
+	top:0px;
+	height: 100vh;
+	width: 85%;
+	border:10px solid green;
+}
+
+#logView{
+	position: relative;
+	top:0px;
+	height: 100vh;
+	width: 15%;
+	border:2px solid red;
+	float: right;
+}
+
+
+
+#homepage {
+	position: fixed;
+	/*margin-top: 25vh;*/
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(222,222,222, 0.8);
+	/*border: 1px solid black;*/
+}
+
+.startPin {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: 200;
+	padding-top: 50px;
+
+
+}
+.title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 5em;
+	text-align: center;
+	font-weight: 800;
+	padding-top: 30vh;
+}
+
+.intro {
+	padding-top: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: 400;
+}
+
+#startPin {
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	text-align: center;
+	font-weight: 400;
+
+}
+
+#menu {
+
+	position:fixed;
+	margin-left: 20px;
+	margin-top: 80vh;
+	/*border: 1px solid #020;*/
+	width: 150px;
+	height: 200px;
+	z-index: 100;
+
+}
+
+.menu {
+	font-family:'Roboto', sans-serif;
+	font-size: 1.2em;
+	font-weight: 400;
+	color: rgba(44,77,108,0.5);
+	text-align: center;
+}
+
+.menu:hover {
+	color: red;
+
+}
+
+#logo {
+	position:fixed;
+	/*border: 1px solid #0f0;*/
+	width: 150px;
+	margin-left: 20px;
+	margin-top: 20px;
+	z-index: 100;
+	text-align: center;
+}
+
+
 #map_view { 
 	height: 600px;
 	width: 90%; 
+}
+
+#aboutUsTitle {
+	font-size: 3em;
+
+
 }
