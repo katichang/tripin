@@ -19,16 +19,14 @@ ul {
 	width: 100%;
 	border: 1px solid red;
 	/*background-color: rgba(174,159,141, 0.6);*/
-	background-image: url("../../assets/sampleImg1.jpg");
-	background-size: 100% 100%;
 }
 
-.inlineTitle{
+.inline-title{
 	font-family:'Alegreya SC', serif;
 	color: rgba(178,44,65,1);
 }
 
-#mapView{
+#map-view{
 	position: fixed;
 	top:0px;
 	height: 100vh;
@@ -36,7 +34,7 @@ ul {
 	border:10px solid green;
 }
 
-#logView{
+#log-view{
 	position: relative;
 	top:0px;
 	height: 100vh;
@@ -52,8 +50,13 @@ ul {
 	/*margin-top: 25vh;*/
 	height: 100vh;
 	width: 100%;
-	background-color: rgba(222,222,222, 0.8);
+	/*background-color: rgba(222,222,222, 0.8);*/
 	/*border: 1px solid black;*/
+	/*z-index: 2;*/
+	background-image: url("../../assets/sampleImg1.jpg");
+	background-size: 100% 100%;
+	z-index: 2;
+
 }
 
 .startPin {
@@ -81,7 +84,7 @@ ul {
 	font-weight: 400;
 }
 
-#startPin {
+#start-pin {
 
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
@@ -123,12 +126,6 @@ ul {
 	margin-top: 20px;
 	z-index: 100;
 	text-align: center;
-}
-
-
-#map_view { 
-	height: 600px;
-	width: 90%; 
 }
 
 #aboutUsTitle {

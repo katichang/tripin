@@ -1,4 +1,4 @@
-var mapViewDOM = $("#map_view");
+var mapViewDOM = $("#map-view");
 
 var map;
 var geojson;
@@ -76,9 +76,11 @@ function selectFeature(e) {
     if (selectedCountries.has(country)) {
         selectedCountries.delete(country);
         unColorSelectedFeature(layer);
+        removeCountryFromList(country);
     } else {
         selectedCountries.add(country);
         colorSelectedFeature(layer);
+        appendCountryToList(country);
     }
 }
 
