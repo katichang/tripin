@@ -1,5 +1,6 @@
 var homePageDOM = $("#homepage");
+var startButtonDOM = $("#start-pin-button");
 
-homePageDOM.click(function() {
-    homePageDOM.slideUp();
-});
+startButtonDOM.click(function() {
+	homePageDOM.slideUp();
+})

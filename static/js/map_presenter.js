@@ -12,8 +12,14 @@ var initializeMap = function() {
     map = L.map(mapViewDOM[0], {
         maxBounds: worldBounds,
         maxBoundsViscosity: 1.0,
-        worldCopyJump: true
+        worldCopyJump: true,
+        zoomControl: false
     });
+
+    // position zoom control buttons to top right corner
+    L.control.zoom({
+         position:'topright'
+    }).addTo(map);
 
     var initLat = 25.0;
     var initLng = 0.0;
@@ -87,7 +93,7 @@ function selectFeature(e) {
 function colorSelectedFeature(layer) {
     layer.setStyle({
         weight: 5,
-        color: ' #00ff00',
+        color: '#00ff00',
         dashArray: '',
         fillOpacity: 0.7
     });

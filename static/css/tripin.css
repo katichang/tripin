@@ -59,7 +59,7 @@ ul {
 
 }
 
-.startPin {
+.start-pin {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
 	text-align: center;
@@ -82,15 +82,6 @@ ul {
 	font-size: 1.5em;
 	text-align: center;
 	font-weight: 400;
-}
-
-#start-pin {
-
-	font-family: 'Roboto', sans-serif;
-	font-size: 1em;
-	text-align: center;
-	font-weight: 400;
-
 }
 
 #menu {

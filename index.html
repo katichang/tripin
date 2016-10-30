@@ -16,9 +16,28 @@
 		</div>
 
 		<div id="menu">
-			<p class="menu"><a href="">About Us</a></p>
+			<p class="menu"><a href="./static/views/about.html" target="_blank">About Us</a></p>
 			<p class="menu"><a href="">Gallery</a></p>
-			<p class="menu"><a href="">Contact Us</a></p>
+			<p class="menu"><a href="" data-toggle="modal" data-target="#contactUsModal">Contact Us</a></p>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="contactUsModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Contact Us</h4>
+					</div>
+					<div class="modal-body">
+						<p>Email to katichang@gmail.com</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div id="homepage">
@@ -27,19 +46,17 @@
 				Make voyages. Attemp them.
 				<br> And record them here at <span class="inline-title"> Trip Pin</span>. There is nothing else.
 			</p>
-			<p class="start-pin">
-				<span onclick="">start my pin</span>
-			</p>
-
+			<p class="start-pin"><input type="button" class="btn btn-primary btn-lg" id="start-pin-button" value="Start My Pin" /></p>
 		</div>
 		<div id="map-view"></div>
 		<div id="log-view">
-			<ol id="pinned-country-list"></ol>
+			<ul id="pinned-country-list"></ul>
 		</div>
 	</div> 
 
 	<!-- dependencies -->
 	<script src="./third_party/jquery/jquery-3.1.1.min.js"></script>
+	<script src="./third_party/bootstrap/js/bootstrap.min.js"></script>
 	<script src="./third_party/leaflet/leaflet.js"></script>
 
 	<script src="./static/js/countries.js"></script>
