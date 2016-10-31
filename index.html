@@ -11,19 +11,21 @@
 </head>
 
 <body>
+
 	<div id="home-container">
+		<!-- Fixed location logo. -->
 		<div id="logo">
 			<h1><img src="./assets/logo2.png" alt="Trip Pin logo"> Trip Pin</h1>
 		</div>
 
+		<!-- Fixed location menu. -->
 		<div id="menu">
 			<p class="menu"><a href="./static/views/about.html" target="_blank">About Us</a></p>
 			<p class="menu"><a href="./static/views/gallery.html" target="_blank">Gallery</a></p>
 			<p class="menu"><a href="" data-toggle="modal" data-target="#contactUsModal">Contact Us</a></p>
 		</div>
 
-
-
+		<!-- Landing page. -->
 		<div id="homepage">
 			<p id="home-title">Welcome to <span class="inline-title"> Trip Pin</span></p>
 			<p id="home-intro">
@@ -54,16 +56,16 @@
 			</div>
 		</div>
 
-
-
+		<!-- Map view and log view on home page. -->
 		<div id="map-view"></div>
+
 		<div id="log-view">
 			<p id="log-view-title"> - Pin List - </p>
 			<ul id="pinned-country-list"></ul>
 		</div>
 	</div> 
 
-	<!-- dependencies -->
+	<!-- Dependencies -->
 	<script src="./third_party/jquery/jquery-3.1.1.min.js"></script>
 	<script src="./third_party/bootstrap/js/bootstrap.min.js"></script>
 	<script src="./third_party/leaflet/leaflet.js"></script>

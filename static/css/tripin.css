@@ -1,3 +1,4 @@
+/*Disable scrolling for the page.*/
 html,body{
     overflow:hidden;
 }
@@ -6,7 +7,7 @@ html,body{
 body {
     background-color: rgba(204,204,204,0.15);
 }
-
+/*Font style for fixed logo on each page.*/
 h1 {
 	font-family:'Alegreya SC', serif;
 	font-size: 2em;
@@ -17,7 +18,57 @@ ul {
   list-style-type: none;
 }
 
+/*Trip Pin font style for home page inline title.*/
+.inline-title{
+	font-family:'Alegreya SC', serif;
+	color: rgba(154,205,255,0.8);
+}
 
+/*Default menu list style.*/
+.menu {
+	font-family:'Roboto', sans-serif;
+	font-size: 1.2em;
+	font-weight: 400;
+	color: rgba(44,77,108,0.5);
+	text-align: center;
+}
+
+/*Modal style used in Contact Us.*/
+.modal-title {
+	font-family:'Open Sans', sans-serif;
+	font-size: 1.2em;
+	font-weight: 300;
+	color: rgba(44,77,108,1);
+	text-align: center;
+}
+
+.modal-body {
+	font-family:'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 200;
+	color: rgba(44,77,108,1);
+	text-align: center;
+}
+
+/*Gallery image slideshow style.*/
+.mySlides {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+/*Font style for Start My Pin button.*/
+.start-pin {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: 200;
+	padding-top: 50px;
+}
+
+
+/*Container size for home page.*/
 #home-container {
 	left: 0px;
 	top: 0px;
@@ -25,44 +76,7 @@ ul {
 	width: 100%;
 }
 
-#views-container {
-	position: fixed;
-	top: 0px;
-	width: 70%;
-	margin-left: 15%;
-	margin-right: 15%;
-	height: 100vh;
-	background-color: rgba(174,159,141,0.3);
-	/*z-index: 1;*/
-}
-
-.inline-title{
-	font-family:'Alegreya SC', serif;
-	color: rgba(154,205,255,0.8);
-}
-
-#map-view{
-	position: fixed;
-	top:0px;
-	height: 100vh;
-	width: 85%;
-	/*border:10px solid green;*/
-}
-
-#log-view{
-	position: relative;
-	top:0px;
-	height: 100vh;
-	width: 15%;
-	/*border:2px solid red;*/
-	float: right;
-	/*background-color: rgba(93,140,185,0.2);*/
-	background-color: rgba(174,159,141,0.3);
-	border-left: 1px solid rgba(154,205,255,0.8);
-}
-
-
-
+/*Landing page style.*/
 #homepage {
 	position: fixed;
 	height: 100vh;
@@ -71,18 +85,8 @@ ul {
 	background-size: 100% 100%;
 	color:rgba(255,255,255,0.9);
 	z-index: 3;
-
 }
 
-.start-pin {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.5em;
-	text-align: center;
-	font-weight: 200;
-	padding-top: 50px;
-
-
-}
 #home-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 5em;
@@ -99,18 +103,84 @@ ul {
 	font-weight: 300;
 }
 
-#about-title {
-	font-family:'Alegreya SC', serif;
-	font-size: 5em;
-	font-weight: 700;
-	color: rgba(44,77,108,0.8);
-	text-align: left;
-	padding-top: 10vh;
-	margin-bottom: 0em;
-	margin-left: 100px;
+/*Container for map view in home page.*/
+#map-view{
+	position: fixed;
+	top:0px;
+	height: 100vh;
+	width: 85%;
 }
 
-#gallery-title {
+/*Container for log view in home page.*/
+#log-view{
+	position: relative;
+	top:0px;
+	height: 100vh;
+	width: 15%;
+	float: right;
+	background-color: rgba(174,159,141,0.3);
+	border-left: 1px solid rgba(154,205,255,0.8);
+}
+
+/*Style for log view.*/
+#log-view-title {
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align: left;
+	font-family:'Open Sans', sans-serif;
+	font-size: 1.2em;
+	font-weight: 600;
+	color: rgba(44,77,108,1);
+}
+
+#pinned-country-list {
+	list-style-type: outside;
+	margin-top: 10px;
+	font-family:'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 300;
+	color: rgba(44,77,108,1);
+	text-align: left;
+}
+
+/*Style for fixed location logo and menu.*/
+#menu {
+	position:fixed;
+	margin-left: 20px;
+	margin-top: 70vh;
+	width: 150px;
+	height: 200px;
+	z-index: 2;
+}
+
+#logo {
+	position:absolute;
+	width: 150px;
+	left: 20px;
+	top: 20px;
+	text-align: center;
+	color: rgba(44,77,108,1);
+	z-index: 2;
+}
+
+#logo img {
+	width: 22px;
+	height: 40px;
+}
+
+/*Container size for Views folder pages.*/
+#views-container {
+	position: fixed;
+	top: 0px;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	height: 100vh;
+	background-color: rgba(174,159,141,0.3);
+}
+
+/*Style for About page.*/
+#about-title {
 	font-family:'Alegreya SC', serif;
 	font-size: 5em;
 	font-weight: 700;
@@ -133,9 +203,31 @@ ul {
 	overflow: hidden;
 }
 
-#gallery-image {
-	width: 800px;
+#about-intro img {
+	width: 50%;
+	display: inline;
+}
 
+#about-intro span {
+	display: block;
+	padding-top: 50px;
+	text-align: left;
+}
+
+/*Style for Gallery page.*/
+#gallery-title {
+	font-family:'Alegreya SC', serif;
+	font-size: 5em;
+	font-weight: 700;
+	color: rgba(44,77,108,0.8);
+	text-align: left;
+	padding-top: 10vh;
+	margin-bottom: 0em;
+	margin-left: 100px;
+}
+
+#gallery-image {
+	width: 100%;
 	margin-top: 5vh;
 	margin-left: auto;
 	margin-right: auto;
@@ -144,100 +236,20 @@ ul {
 
 
 
-#about-intro img {
-	width: 50%;
-	display: inline;
-}
-#about-intro span {
-	display: block;
-	padding-top: 50px;
-	text-align: left;
-}
-
-#menu {
-	position:fixed;
-	margin-left: 20px;
-	margin-top: 70vh;
-	width: 150px;
-	height: 200px;
-	z-index: 2;
-
-}
-
-.menu {
-	font-family:'Roboto', sans-serif;
-	font-size: 1.2em;
-	font-weight: 400;
-	color: rgba(44,77,108,0.5);
-	text-align: center;
-}
 
 
 
-.modal-title {
-	font-family:'Open Sans', sans-serif;
-	font-size: 1.2em;
-	font-weight: 300;
-	color: rgba(44,77,108,1);
-	text-align: center;
-
-}
-
-.modal-body {
-	font-family:'Roboto', sans-serif;
-	font-size: 1em;
-	font-weight: 200;
-	color: rgba(44,77,108,1);
-	text-align: center;
-
-}
-
-#log-view-title {
-	margin-top: 10px;
-	margin-left: 40px;
-	text-align: left;
-	font-family:'Open Sans', sans-serif;
-	font-size: 1.2em;
-	font-weight: 600;
-	color: rgba(44,77,108,1);
-}
-
-#pinned-country-list {
-	list-style-type: outside;
-	margin-top: 10px;
-	/*text-align: center;*/
-	font-family:'Roboto', sans-serif;
-	font-size: 1em;
-	font-weight: 300;
-	color: rgba(44,77,108,1);
-	text-align: left;
 
 
-}
 
-#logo {
-	position:absolute;
-	/*border: 1px solid #0f0;*/
-	width: 150px;
-	left: 20px;
-	top: 20px;
-	z-index: 2;
-	text-align: center;
-	color: rgba(44,77,108,1);
-}
 
-#logo img {
-	width: 22px;
-	height: 40px;
 
-}
 
-.mySlides {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
 
-}
+
+
+
+
 
 
 
