@@ -1,9 +1,13 @@
+/*
+The code below controls the map view component that allows users to interact with the map and countries.
+*/
 var mapViewDOM = $("#map-view");
 
 var map;
 var geojson;
 var selectedCountries = new Set();
 
+// Initialize the map view.
 var initializeMap = function() {
 	if (map != undefined) {
 		map.remove();
@@ -44,6 +48,7 @@ var initializeMap = function() {
     return map;
 }
 
+// Change the styles of the highlighted feature.
 function highlightFeature(e) {
     var layer = e.target;
     var country = layer.feature.properties.name;
@@ -63,6 +68,7 @@ function highlightFeature(e) {
     }
 }
 
+// Reset the default styles of the given feature.
 function resetHighlight(e) {
     var layer = e.target;
     var country = layer.feature.properties.name;
@@ -72,10 +78,9 @@ function resetHighlight(e) {
     geojson.resetStyle(layer);
 }
 
-function zoomToFeature(e) {
-    map.fitBounds(e.target.getBounds());
-}
-
+// Handles a feature selection event.
+// If the given feature is not currently selected, mark it as selected, and add to the set.
+// If the given feature is  currently selected, remove from the set, and reset style. 
 function selectFeature(e) {
     var layer = e.target;
     var country = layer.feature.properties.name;
@@ -90,6 +95,7 @@ function selectFeature(e) {
     }
 }
 
+// Change the styles of the selected feature.
 function colorSelectedFeature(layer) {
     layer.setStyle({
         weight: 3,
@@ -99,10 +105,12 @@ function colorSelectedFeature(layer) {
     });
 }
 
+// Reset the styles of the unselected feature.
 function unColorSelectedFeature(layer) {
     geojson.resetStyle(layer);
 }
 
+// Define behaviors for different user interactions with a feature.
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
@@ -110,7 +118,5 @@ function onEachFeature(feature, layer) {
         click: selectFeature
     });
 }
-
-
 
 map = initializeMap();
