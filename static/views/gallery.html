@@ -2,11 +2,14 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<link rel="stylesheet" href="../../third_party/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/tripin.css">
 	<link rel="icon" type="image/png" href="../../assets/browser_tab_img.png">
 	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Open+Sans|Roboto:300,400" rel="stylesheet">
-	<title>Trip Pin - About</title>
+
+	<title>Trip Pin - Gallery</title>
 </head>
 
 <body>
@@ -17,7 +20,7 @@
 
 		<div id="menu">
 			<p class="menu"><a href="../../index.html">Home</a></p>
-			<p class="menu"><a href="gallery.html">Gallery</a></p>
+			<p class="menu"><a href="about.html">About Us</a></p>
 			<p class="menu"><a href="" data-toggle="modal" data-target="#contactUsModal">Contact Us</a></p>
 		</div>
 
@@ -45,14 +48,38 @@
 
 
 	<div id="views-container">
-		<p id="about-title">Hello</p>
-		<p id="about-intro">
-			<img src="../../assets/aboutImg.jpg" alt="About Us Image">
-			<span>My name is Kati Chang. I am an outdoor enthusiast, an active yogi, and an Android user experience researcher. I started doing outdoor odysseys since October 2014. Till now, I have backpacked at Yosemite in California, Olympic National Park in Washington and Glacier National Park in Montana. </span>
+		<p id="gallery-title">Gallery</p>
+		<p id="gallery-image">
+			<img class="mySlides" src="../../assets/galleryImg1.jpg" alt="Image 01" style="width:80%">
+	  		<img class="mySlides" src="../../assets/galleryImg2.jpg" alt="Image 02" style="width:80%">
+	  		<img class="mySlides" src="../../assets/galleryImg3.jpg" alt="Image 03" style="width:80%">
+	  		<a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+	  		<a class="w3-btn-floating w3-display-right" onclick="plusDivs(1)">&#10095;</a>
 		</p>
+		
 	</div>	
 
 	<!-- dependencies -->
+
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		     x[i].style.display = "none";
+		  }
+		  x[slideIndex-1].style.display = "block";
+		}
+	</script>
 	<script src="../../third_party/jquery/jquery-3.1.1.min.js"></script>
 	<script src="../../third_party/bootstrap/js/bootstrap.min.js"></script>
 

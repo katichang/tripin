@@ -52,10 +52,10 @@ function highlightFeature(e) {
     }
 
     layer.setStyle({
-        weight: 5,
-        color: '#666',
+        weight: 2,
+        color: 'rbga(251,240,228,0.5)',
         dashArray: '',
-        fillOpacity: 0.7
+        fillOpacity: 0.3
     });
 
     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
@@ -92,10 +92,10 @@ function selectFeature(e) {
 
 function colorSelectedFeature(layer) {
     layer.setStyle({
-        weight: 5,
-        color: '#00ff00',
+        weight: 3,
+        color: 'rgba(174,159,141,0.7)',
         dashArray: '',
-        fillOpacity: 0.7
+        fillOpacity: 0.5
     });
 }
 

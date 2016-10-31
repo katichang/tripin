@@ -2,6 +2,11 @@ html,body{
     overflow:hidden;
 }
 
+/*Set background color of page to light grey with 0.15 opacity.*/
+body {
+    background-color: rgba(204,204,204,0.15);
+}
+
 h1 {
 	font-family:'Alegreya SC', serif;
 	font-size: 2em;
@@ -12,18 +17,28 @@ ul {
   list-style-type: none;
 }
 
-#container {
+
+#home-container {
 	left: 0px;
 	top: 0px;
 	height: 100vh;
 	width: 100%;
-	border: 1px solid red;
-	/*background-color: rgba(174,159,141, 0.6);*/
+}
+
+#views-container {
+	position: fixed;
+	top: 0px;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	height: 100vh;
+	background-color: rgba(174,159,141,0.3);
+	/*z-index: 1;*/
 }
 
 .inline-title{
 	font-family:'Alegreya SC', serif;
-	color: rgba(178,44,65,1);
+	color: rgba(154,205,255,0.8);
 }
 
 #map-view{
@@ -31,7 +46,7 @@ ul {
 	top:0px;
 	height: 100vh;
 	width: 85%;
-	border:10px solid green;
+	/*border:10px solid green;*/
 }
 
 #log-view{
@@ -39,23 +54,23 @@ ul {
 	top:0px;
 	height: 100vh;
 	width: 15%;
-	border:2px solid red;
+	/*border:2px solid red;*/
 	float: right;
+	/*background-color: rgba(93,140,185,0.2);*/
+	background-color: rgba(174,159,141,0.3);
+	border-left: 1px solid rgba(154,205,255,0.8);
 }
 
 
 
 #homepage {
 	position: fixed;
-	/*margin-top: 25vh;*/
 	height: 100vh;
 	width: 100%;
-	/*background-color: rgba(222,222,222, 0.8);*/
-	/*border: 1px solid black;*/
-	/*z-index: 2;*/
-	background-image: url("../../assets/sampleImg1.jpg");
+	background-color: rgba(0,0,0,0.8);
 	background-size: 100% 100%;
-	z-index: 2;
+	color:rgba(255,255,255,0.9);
+	z-index: 3;
 
 }
 
@@ -68,7 +83,7 @@ ul {
 
 
 }
-.title {
+#home-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 5em;
 	text-align: center;
@@ -76,23 +91,76 @@ ul {
 	padding-top: 30vh;
 }
 
-.intro {
+#home-intro {
 	padding-top: 50px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.5em;
 	text-align: center;
-	font-weight: 400;
+	font-weight: 300;
+}
+
+#about-title {
+	font-family:'Alegreya SC', serif;
+	font-size: 5em;
+	font-weight: 700;
+	color: rgba(44,77,108,0.8);
+	text-align: left;
+	padding-top: 10vh;
+	margin-bottom: 0em;
+	margin-left: 100px;
+}
+
+#gallery-title {
+	font-family:'Alegreya SC', serif;
+	font-size: 5em;
+	font-weight: 700;
+	color: rgba(44,77,108,0.8);
+	text-align: left;
+	padding-top: 10vh;
+	margin-bottom: 0em;
+	margin-left: 100px;
+}
+
+#about-intro {
+	font-family: 'Roboto', sans-serif;
+	color: rgba(44,77,108,0.7);
+	font-size: 1em;
+	text-align: left;
+	margin-top: 5vh;
+	font-weight: 300;
+	padding-left: 100px;
+	padding-right: 100px;
+	overflow: hidden;
+}
+
+#gallery-image {
+	width: 800px;
+
+	margin-top: 5vh;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+
+
+#about-intro img {
+	width: 50%;
+	display: inline;
+}
+#about-intro span {
+	display: block;
+	padding-top: 50px;
+	text-align: left;
 }
 
 #menu {
-
 	position:fixed;
 	margin-left: 20px;
-	margin-top: 80vh;
-	/*border: 1px solid #020;*/
+	margin-top: 70vh;
 	width: 150px;
 	height: 200px;
-	z-index: 100;
+	z-index: 2;
 
 }
 
@@ -104,23 +172,72 @@ ul {
 	text-align: center;
 }
 
-.menu:hover {
-	color: red;
+
+
+.modal-title {
+	font-family:'Open Sans', sans-serif;
+	font-size: 1.2em;
+	font-weight: 300;
+	color: rgba(44,77,108,1);
+	text-align: center;
+
+}
+
+.modal-body {
+	font-family:'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 200;
+	color: rgba(44,77,108,1);
+	text-align: center;
+
+}
+
+#log-view-title {
+	margin-top: 10px;
+	margin-left: 40px;
+	text-align: left;
+	font-family:'Open Sans', sans-serif;
+	font-size: 1.2em;
+	font-weight: 600;
+	color: rgba(44,77,108,1);
+}
+
+#pinned-country-list {
+	list-style-type: outside;
+	margin-top: 10px;
+	/*text-align: center;*/
+	font-family:'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 300;
+	color: rgba(44,77,108,1);
+	text-align: left;
+
 
 }
 
 #logo {
-	position:fixed;
+	position:absolute;
 	/*border: 1px solid #0f0;*/
 	width: 150px;
-	margin-left: 20px;
-	margin-top: 20px;
-	z-index: 100;
+	left: 20px;
+	top: 20px;
+	z-index: 2;
 	text-align: center;
+	color: rgba(44,77,108,1);
 }
 
-#aboutUsTitle {
-	font-size: 3em;
-
+#logo img {
+	width: 22px;
+	height: 40px;
 
 }
+
+.mySlides {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+

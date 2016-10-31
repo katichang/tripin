@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="./third_party/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./third_party/leaflet/leaflet.css">
 	<link rel="stylesheet" href="./static/css/tripin.css">
 	<link rel="icon" type="image/png" href="./assets/browser_tab_img.png">
-	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Open+Sans|Roboto" rel="stylesheet">
-	<title>Trip Pin</title>
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Open+Sans|Roboto:300,400" rel="stylesheet">
+	<title>Trip Pin - Home</title>
 </head>
 
 <body>
-	<div id="container">
+	<div id="home-container">
 		<div id="logo">
-			<h1><img src="./assets/logo.png" alt="Trip Pin logo" width="22px" height="40px"> Trip Pin</h1>
+			<h1><img src="./assets/logo2.png" alt="Trip Pin logo"> Trip Pin</h1>
 		</div>
 
 		<div id="menu">
 			<p class="menu"><a href="./static/views/about.html" target="_blank">About Us</a></p>
-			<p class="menu"><a href="">Gallery</a></p>
+			<p class="menu"><a href="./static/views/gallery.html" target="_blank">Gallery</a></p>
 			<p class="menu"><a href="" data-toggle="modal" data-target="#contactUsModal">Contact Us</a></p>
+		</div>
+
+
+
+		<div id="homepage">
+			<p id="home-title">Welcome to <span class="inline-title"> Trip Pin</span></p>
+			<p id="home-intro">
+				Make voyages. Attemp them.
+				<br> And record them here at <span class="inline-title"> Trip Pin</span>. There is nothing else.
+			</p>
+			<p class="start-pin"><input type="button" class="btn btn-primary btn-lg" id="start-pin-button" value="Start My Pin" /></p>
 		</div>
 
 		<!-- Modal -->
@@ -31,7 +43,9 @@
 						<h4 class="modal-title">Contact Us</h4>
 					</div>
 					<div class="modal-body">
-						<p>Email to katichang@gmail.com</p>
+						<p>Via e-mail: <br> kchang13@art.edu</p>
+						<br>
+						<p>Via phone: <br> 607-379-9396</p>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -40,16 +54,11 @@
 			</div>
 		</div>
 
-		<div id="homepage">
-			<p class="title">Welcome to <span class="inline-title"> Trip Pin</span></p>
-			<p class="intro">
-				Make voyages. Attemp them.
-				<br> And record them here at <span class="inline-title"> Trip Pin</span>. There is nothing else.
-			</p>
-			<p class="start-pin"><input type="button" class="btn btn-primary btn-lg" id="start-pin-button" value="Start My Pin" /></p>
-		</div>
+
+
 		<div id="map-view"></div>
 		<div id="log-view">
+			<p id="log-view-title"> - Pin List - </p>
 			<ul id="pinned-country-list"></ul>
 		</div>
 	</div> 
